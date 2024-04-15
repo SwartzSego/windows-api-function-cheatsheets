@@ -240,6 +240,14 @@ VOID RtlMoveMemory(
 ```
 
 ### Thread Management
+[QueueUserAPC](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-queueuserapc)
+```c
+DWORD QueueUserAPC(
+  [in] PAPCFUNC  pfnAPC, // A pointer to the application-supplied APC function to be called when the specified thread performs an alertable wait operation. For more information, see PAPCFUNC callback function.
+  [in] HANDLE    hThread, // A pointer to the application-supplied APC function to be called when the specified thread performs an alertable wait operation. For more information, see PAPCFUNC callback function.
+  [in] ULONG_PTR dwData // A single value that is passed to the APC function pointed to by the pfnAPC parameter.
+);
+```
 [CreateThread](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)
 ```c
 HANDLE CreateThread(
